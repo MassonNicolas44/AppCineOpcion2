@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PageCreateAccount">
+
+    <EditText
+        android:id="@+id/etvNameAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="11"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/etvFamilyNameAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="11"
+        android:hint="@string/Family_Name"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/etvNameAccount"
+        app:layout_constraintStart_toStartOf="@+id/etvNameAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvNameAccount" />
+
+    <EditText
+        android:id="@+id/etvAgeAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="11"
+        android:hint="@string/Age"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/etvFamilyNameAccount"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etvFamilyNameAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvFamilyNameAccount" />
+
+    <EditText
+        android:id="@+id/etvUsernameAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="11"
+        android:hint="@string/Username"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/etvAgeAccount"
+        app:layout_constraintStart_toStartOf="@+id/etvAgeAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvAgeAccount" />
+
+    <EditText
+        android:id="@+id/etvPasswordAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="11"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/etvUsernameAccount"
+        app:layout_constraintStart_toStartOf="@+id/etvUsernameAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvUsernameAccount" />
+
+    <Button
+        android:id="@+id/btLoginAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="loginAccount"
+        android:text="@string/Sign_Up"
+        app:layout_constraintStart_toStartOf="@+id/etvPasswordAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvPasswordAccount" />
+
+    <Button
+        android:id="@+id/btCancelAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="cancelAccount"
+        android:text="@string/Cancel"
+        app:layout_constraintEnd_toEndOf="@+id/etvPasswordAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvPasswordAccount" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

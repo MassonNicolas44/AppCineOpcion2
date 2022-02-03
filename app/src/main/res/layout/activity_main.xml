@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="124dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/welcome2" />
+
+    <EditText
+        android:id="@+id/etvUsernameAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:background="#4DD0E1"
+        android:ems="11"
+        android:hint="@string/Username"
+        android:inputType="textPersonName"
+        android:padding="17dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/iv"
+        app:layout_constraintStart_toStartOf="@+id/iv"
+        app:layout_constraintTop_toBottomOf="@+id/iv" />
+
+    <Button
+        android:id="@+id/btLoginAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="loginMain"
+        android:text="@string/Login"
+        app:layout_constraintStart_toStartOf="@+id/textImput"
+        app:layout_constraintTop_toBottomOf="@+id/textImput" />
+
+    <Button
+        android:id="@+id/btCancelAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="cancelMain"
+        android:text="@string/Cancel"
+        app:layout_constraintEnd_toEndOf="@+id/textImput"
+        app:layout_constraintTop_toBottomOf="@+id/textImput" />
+
+    <Button
+        android:id="@+id/btCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="14"
+        android:onClick="createAccount"
+        android:text="@string/Create_Account"
+        app:layout_constraintEnd_toEndOf="@+id/btCancelAccount"
+        app:layout_constraintStart_toStartOf="@+id/btLoginAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btLoginAccount" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textImput"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/etvUsernameAccount"
+        app:layout_constraintStart_toStartOf="@+id/etvUsernameAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etvUsernameAccount">
+
+        <EditText
+            android:id="@+id/etvPasswordAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4DD0E1"
+            android:ems="11"
+            android:hint="@string/Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
